@@ -1,5 +1,5 @@
 import React from 'react'
-import arrayDistruct from '../assets/portfolio/arrayDestruct.jpg'
+import arrayDistruct from '../assets/portfolio/download.png'
 import installNode from '../assets/portfolio/installNode.jpg'
 import navbar from '../assets/portfolio/navbar.jpg'
 import reactParallax from '../assets/portfolio/reactParallax.jpg'
@@ -11,7 +11,9 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: arrayDistruct
+            src: arrayDistruct,
+            codeurl: 'https://github.com/zaltemahesh7/LearnReactJs/tree/BackgroundChanger',
+            demourl: 'https://6545fdf2b9207a5a0c40ac02--dynamic-kringle-aaccd8.netlify.app/'
         },
         {
             id: 2,
@@ -47,11 +49,11 @@ const Portfolio = () => {
                 <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-0'>
 
                     {portfolios.map((portfolio) =>
-                    (<div key={portfolio.id} className=' shadow-md shadow-gray-600 rounded-lg'>
+                    (<div key={portfolio.id} className=' flex flex-col shadow-md shadow-gray-600 rounded-lg'>
                         <img src={portfolio.src} alt="" className='rounded-md duration-200 hover:scale-105' />
                         <div className=' flex items-center justify-center'>
-                            <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                            <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                            <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a target='_blank' href={portfolio.demourl}>Demo</a></button>
+                            <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a target='_blank' href={portfolio.codeurl}>Code</a></button>
                         </div>
                     </div>)
                     )}

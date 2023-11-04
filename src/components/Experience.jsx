@@ -3,7 +3,7 @@ import html from '../assets/html.png'
 import css from '../assets/css.png'
 import javascript from '../assets/javascript.png'
 import reactImage from '../assets/react.png'
-import nextjs from '../assets/nextjs.png'
+import gitLogo from '../assets/gitLogo.jpg'
 import graphql from '../assets/graphql.png'
 import github from '../assets/github.png'
 import tailwind from '../assets/tailwind.png'
@@ -35,22 +35,16 @@ const Experience = () => {
             style: "shadow-[#00d8ff]"
         },
         {
-            id: 5,
-            name: 'GraphQl',
-            src: graphql,
-            style: "shadow-[#e632ad]"
+            id: 6,
+            name: 'Git',
+            src: gitLogo,
+            style: "shadow-[#eee]"
         },
         {
             id: 6,
             name: 'GitHub',
             src: github,
             style: "shadow-[#eee]"
-        },
-        {
-            id: 7,
-            name: 'Next.Js',
-            src: nextjs,
-            style: "shadow-[#fff]"
         },
         {
             id: 8,
@@ -73,7 +67,7 @@ const Experience = () => {
 
                     {Skills.map((Skill) =>
                     (<div key={Skill.id} className={`flex flex-col justify-center items-center shadow-md ${Skill.style} rounded-lg`}>
-                        <img src={Skill.src} alt="" className='rounded-md duration-200 hover:scale-105' />
+                        <img src={Skill.src} alt="" className=' w-full rounded-md duration-200 hover:scale-105' />
                         <div className=' flex items-center justify-center'>
                             <p className=' cursor-pointer w-1/2 py-3 m-4 duration-200 hover:scale-105'>{Skill.name}</p>
                         </div>
