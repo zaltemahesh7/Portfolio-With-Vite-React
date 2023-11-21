@@ -1,5 +1,5 @@
 import React from 'react'
-import arrayDistruct from '../assets/portfolio/download.png'
+import bgColorChanger from '../assets/portfolio/download.png'
 import installNode from '../assets/portfolio/installNode.jpg'
 import navbar from '../assets/portfolio/navbar.jpg'
 import reactParallax from '../assets/portfolio/reactParallax.jpg'
@@ -11,7 +11,7 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: arrayDistruct,
+            src: bgColorChanger,
             codeurl: 'https://github.com/zaltemahesh7/LearnReactJs/tree/BackgroundChanger',
             demourl: 'https://6545fdf2b9207a5a0c40ac02--dynamic-kringle-aaccd8.netlify.app/'
         },

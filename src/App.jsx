@@ -6,6 +6,7 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,6 +18,7 @@ function App() {
       <Portfolio />
       <Experience />
       <Contact />
+      <Footer />
 
       <SocialLinks />
     </>

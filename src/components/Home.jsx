@@ -10,7 +10,7 @@ const Home = () => {
         <div className='flex flex-col justify-center h-full'>
           <h2 className=' text-4xl sm:text-7xl font-bold text-white'>I'm Web Developer</h2>
           <p className=' text-gray-500 py-4 max-w-md text-justify'>
-            👋 Passionate web developer with a Bachelor's in Computer Science, currently pursuing an MCA. Skilled in JavaScript, React JS, Node.js, MongoDB, HTML5, CSS3, Bootstrap, Tailwind CSS, Git, and GitHub. Let's connect on LinkedIn 😍.
+            👋 Passionate web developer with a Bachelor's in Computer Science, currently pursuing an MCA. Skilled in JavaScript, React JS, Node.js, MongoDB, HTML5, CSS3, Bootstrap, Tailwind CSS, Git, and GitHub. Let's connect 😍.
           </p>
           <div>
             <Link to="portfolio" smooth duration={500} className=' group text-white px-6 py-3 w-fit my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
