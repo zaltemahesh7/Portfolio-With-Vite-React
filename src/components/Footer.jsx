@@ -54,7 +54,7 @@ const Footer = () => {
                     ))}
                 </ul>
             </div>
-            <p>Hello</p>
+            <p>&copy; 2023 Mahesh Zalte. All rights reserved</p>
         </div>
     )
 }
