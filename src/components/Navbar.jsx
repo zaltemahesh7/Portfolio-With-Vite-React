@@ -30,7 +30,7 @@ const Navbar = () => {
     ]
 
     return (
-        <div className='flex justify-between items-center w-full h-20 fixed text-white bg-black px-4'>
+        <div className='flex justify-between z-10 items-center w-full h-20 fixed text-white bg-black px-4'>
             <div>
                 <h1 className=' font-signature text-5xl ml-2 cursor-pointer'><Link to='home' smooth duration={500}>Mahesh</Link></h1>
             </div>

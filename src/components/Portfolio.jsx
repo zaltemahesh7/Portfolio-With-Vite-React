@@ -5,6 +5,7 @@ import navbar from '../assets/portfolio/navbar.jpg'
 import reactParallax from '../assets/portfolio/reactParallax.jpg'
 import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
 import reactWeather from '../assets/portfolio/reactWeather.jpg'
+import { Link } from 'react-scroll'
 
 const Portfolio = () => {
 
@@ -52,7 +53,7 @@ const Portfolio = () => {
                     (<div key={portfolio.id} className=' flex flex-col shadow-md shadow-gray-600 rounded-lg'>
                         <img src={portfolio.src} alt="" className='rounded-md duration-200 hover:scale-105' />
                         <div className=' flex items-center justify-center'>
-                            <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a target='_blank' href={portfolio.demourl}>Demo</a></button>
+                            <Link to='/stopwatch' className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a target='_blank' href={portfolio.demourl}>Demo</a></Link>
                             <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a target='_blank' href={portfolio.codeurl}>Code</a></button>
                         </div>
                     </div>)
