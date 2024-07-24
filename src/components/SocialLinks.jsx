@@ -1,7 +1,7 @@
-import React from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const SocialLinks = () => {
   const links = [
@@ -12,8 +12,8 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: 'https://linkedin.com/in/mahesh-zalte2000',
-      style: ' rounded-tr-md'
+      href: "https://linkedin.com/in/maheshzalte2000",
+      style: " rounded-tr-md",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const SocialLinks = () => {
           GitHub <FaGithub size={30} />
         </>
       ),
-      href: "",
+      href: "https://github.com/zaltemahesh7",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const SocialLinks = () => {
           Mail <HiOutlineMail size={30} />
         </>
       ),
-      href: 'mailto:maheshzalte2000@gmail.com',
+      href: "mailto:maheshzalte2000@gmail.com",
     },
     {
       id: 4,
@@ -40,25 +40,38 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: '/Mahesh_Zalte-Resume-.pdf',
-      style: ' rounded-br-md',
-      download: true
+      href: "/Mahesh_Zalte.pdf",
+      style: " rounded-br-md",
+      download: true,
     },
-  ]
+  ];
 
   return (
-    <div className=' hidden lg:flex flex-col top-[35%] left-0 fixed'>
+    <div className=" hidden lg:flex flex-col top-[35%] left-0 fixed">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
-          <li key={id} className={'flex justify-between items-center w-40 h-14 px-4 bg-gray-500 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300' + " " + style}>
-            <a href={href} className='flex justify-between items-center w-full text-white' download={download} target="_blank" rel='noreferrel'>
+          <li
+            key={id}
+            className={
+              "flex justify-between items-center w-40 h-14 px-4 bg-gray-500 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300" +
+              " " +
+              style
+            }
+          >
+            <a
+              href={href}
+              className="flex justify-between items-center w-full text-white"
+              download={download}
+              target="_blank"
+              rel="noreferrel"
+            >
               {child}
             </a>
           </li>
         ))}
       </ul>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;

@@ -12,7 +12,7 @@ const Footer = () => {
                     LinkedIn <FaLinkedin size={30} />
                 </>
             ),
-            href: 'https://linkedin.com/in/mahesh-zalte2000',
+            href: 'https://linkedin.com/in/maheshzalte2000',
             style: ' rounded-tr-md'
         },
         {
@@ -22,7 +22,7 @@ const Footer = () => {
                     GitHub <FaGithub size={30} />
                 </>
             ),
-            href: "",
+            href: "https://github.com/zaltemahesh7",
         },
         {
             id: 3,
@@ -40,7 +40,7 @@ const Footer = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: '/Mahesh_Zalte-Resume-.pdf',
+            href: '/Mahesh_Zalte.pdf',
             style: ' rounded-br-md',
             download: true
         },
@@ -50,11 +50,11 @@ const Footer = () => {
             <div>
                 <ul className=' flex justify-around w-80 py-20'>
                     {links.map((link) => (
-                        <li key={link.id} className=''><a className=' hover:cursor-pointer flex flex-col items-center gap-6' href={link.href}>{link.child}</a></li>
+                        <li key={link.id} className=''><a className=' hover:cursor-pointer flex flex-col items-center gap-6' href={link.href} target='new'>{link.child}</a></li>
                     ))}
                 </ul>
             </div>
-            <p>&copy; 2023 Mahesh Zalte. All rights reserved</p>
+            <p>&copy; 2024 Mahesh Zalte. All rights reserved</p>
         </div>
     )
 }
