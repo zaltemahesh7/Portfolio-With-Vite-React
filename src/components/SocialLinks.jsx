@@ -13,7 +13,7 @@ const SocialLinks = () => {
         </>
       ),
       href: "https://linkedin.com/in/maheshzalte2000",
-      style: " rounded-tr-md",
+      style: "rounded-tr-md",
     },
     {
       id: 2,
@@ -41,19 +41,19 @@ const SocialLinks = () => {
         </>
       ),
       href: "/Mahesh_Zalte.pdf",
-      style: " rounded-br-md",
+      style: "rounded-br-md",
       download: true,
     },
   ];
 
   return (
-    <div className=" hidden lg:flex flex-col top-[35%] left-0 fixed">
-      <ul>
+    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+      <ul className="flex flex-col space-y-2">
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
             className={
-              "flex justify-between items-center w-40 h-14 px-4 bg-gray-500 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300" +
+              "flex justify-between items-center w-48 h-14 px-4 bg-gray-800 ml-[-120px] hover:ml-0 hover:rounded-md duration-300 shadow-lg" +
               " " +
               style
             }
@@ -63,7 +63,7 @@ const SocialLinks = () => {
               className="flex justify-between items-center w-full text-white"
               download={download}
               target="_blank"
-              rel="noreferrel"
+              rel="noreferrer"
             >
               {child}
             </a>

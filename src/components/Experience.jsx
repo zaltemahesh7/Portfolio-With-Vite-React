@@ -30,25 +30,31 @@ const Experience = () => {
         },
         {
             id: 4,
-            name: "ReactJs",
+            name: "React.js",
             src: reactImage,
             style: "shadow-[#00d8ff]"
+        },
+        {
+            id: 5,
+            name: 'GraphQL',
+            src: graphql,
+            style: "shadow-[#e535ab]"
         },
         {
             id: 6,
             name: 'Git',
             src: gitLogo,
-            style: "shadow-[#eee]"
+            style: "shadow-[#f34f29]"
         },
         {
             id: 7,
             name: 'GitHub',
             src: github,
-            style: "shadow-[#eee]"
+            style: "shadow-[#181717]"
         },
         {
             id: 8,
-            name: 'Tailwind',
+            name: 'Tailwind CSS',
             src: tailwind,
             style: "shadow-[#44a8b3]"
         },
@@ -60,14 +66,14 @@ const Experience = () => {
             <div className=' max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
                 <div className=' pb-8'>
                     <p className=' text-4xl font-bold inline border-b-4 border-gray-500'>Experience</p>
-                    <p className='py-6'>These are technologies I've worked with.</p>
+                    <p className='py-6'>These are the technologies I've worked with:</p>
                 </div>
 
                 <div className=' grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-4 sm:px-0'>
 
                     {Skills.map((Skill) =>
                     (<div key={Skill.id} className={`flex flex-col justify-center items-center shadow-md ${Skill.style} rounded-lg`}>
-                        <img src={Skill.src} alt="" className=' w-full rounded-md duration-200 hover:scale-105' />
+                        <img src={Skill.src} alt={Skill.name} className=' w-full rounded-md duration-200 hover:scale-105' />
                         <div className=' flex items-center justify-center'>
                             <p className=' cursor-pointer w-1/2 py-3 m-4 duration-200 hover:scale-105'>{Skill.name}</p>
                         </div>

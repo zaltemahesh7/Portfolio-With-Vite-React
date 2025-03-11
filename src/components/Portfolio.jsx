@@ -42,36 +42,48 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className=" bg-gradient-to-b from-black to-gray-800 w-full text-white  md:h-full"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-full"
     >
-      <div className=" max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className=" pb-8">
-          <p className=" text-4xl font-bold inline border-b-4 border-gray-500">
-            PortFolio
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <div className="pb-8">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+            Portfolio
           </p>
-          <p className="py-6">Check out some of my work right here.</p>
+          <p className="py-6">Check out some of my work right here:</p>
         </div>
 
-        <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-0">
           {portfolios.map((portfolio) => (
             <div
               key={portfolio.id}
-              className=" flex flex-col shadow-md shadow-gray-600 rounded-lg"
+              className="flex flex-col shadow-md shadow-gray-600 rounded-lg"
             >
               <img
                 src={portfolio.src}
-                alt=""
+                alt="Project Screenshot"
                 className="rounded-md duration-200 hover:scale-105"
               />
-              <div className=" flex items-center justify-center">
-                <a target="new" href={portfolio.demourl}>
-                  Demo
-                </a>
-                <button className=" w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  <a target="_blank" href={portfolio.codeurl}>
+              <div className="flex items-center justify-center">
+                {portfolio.demourl && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={portfolio.demourl}
+                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 text-center"
+                  >
+                    Demo
+                  </a>
+                )}
+                {portfolio.codeurl && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={portfolio.codeurl}
+                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 text-center"
+                  >
                     Code
                   </a>
-                </button>
+                )}
               </div>
             </div>
           ))}
