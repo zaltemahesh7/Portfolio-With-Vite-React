@@ -21,7 +21,7 @@ const Home = () => {
             📍 Pune, Maharashtra
           </p>
           <p className='text-gray-400 py-4 max-w-md text-justify'>
-            Dynamic Full-Stack Developer (MERN) with 2+ years of experience in designing, developing, and deploying scalable web applications. Expertise in JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS services. Passionate about writing clean, maintainable code and following Agile methodologies to drive development efficiency.
+            Dynamic Full-Stack Developer (MERN) with 1+ years of experience in designing, developing, and deploying scalable web applications. Expertise in JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS services. Passionate about writing clean, maintainable code and following Agile methodologies to drive development efficiency.
           </p>
           <div className='mt-6'>
             <Link to="portfolio" smooth duration={500} className='group text-white px-8 py-4 w-fit my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-105 transform transition duration-300'>
