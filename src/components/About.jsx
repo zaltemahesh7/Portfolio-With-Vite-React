@@ -20,7 +20,7 @@ const About = () => {
         <br />
 
         <p className="text-justify text-xl">
-          I am a dynamic Full-Stack Developer (MERN) with over 2 years of experience in designing, developing, and deploying scalable web applications. I have expertise in JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS services. I am passionate about writing clean, maintainable code and following Agile methodologies to drive development efficiency. Having completed my MCA, I am eager to apply my knowledge and skills to innovative projects. Let's connect and create something great together! 🔗
+          I am a dynamic Full-Stack Developer (MERN) with over 1 years of experience in designing, developing, and deploying scalable web applications. I have expertise in JavaScript, React.js, Node.js, Express.js, MongoDB, and AWS services. I am passionate about writing clean, maintainable code and following Agile methodologies to drive development efficiency. Having completed my MCA, I am eager to apply my knowledge and skills to innovative projects. Let's connect and create something great together! 🔗
         </p>
       </div>
     </div>
