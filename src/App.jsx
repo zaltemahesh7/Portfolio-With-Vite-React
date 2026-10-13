@@ -1,29 +1,30 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import SocialLinks from './components/SocialLinks';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Portfolio from './components/Portfolio';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Testimonial from './components/Testimonial';
-import { Link, Element } from 'react-scroll';
 
 function App() {
-
   return (
     <>
+      <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
-      <Element name="home"><Home /></Element>
-      <Element name="about"><About /></Element>
-      <Element name="portfolio"><Portfolio /></Element>
-      <Element name="experience"><Experience /></Element>
-      <Element name="testimonial"><Testimonial /></Element>
-      <Element name="contact"><Contact /></Element>
+      <main id="main">
+        <Home />
+        <About />
+        <Skills />
+        <Experience />
+        <Portfolio />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
-      <SocialLinks />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

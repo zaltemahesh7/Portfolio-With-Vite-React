@@ -1,90 +1,53 @@
-import React from 'react';
-import html from '../assets/html.png'
-import css from '../assets/css.png'
-import javascript from '../assets/javascript.png'
-import reactImage from '../assets/react.png'
-import gitLogo from '../assets/gitLogo.jpg'
-import graphql from '../assets/graphql.png'
-import github from '../assets/github.png'
-import tailwind from '../assets/tailwind.png'
+const roles = [
+  {
+    title: 'Software Developer',
+    company: 'BhojSoft Solutions',
+    dates: 'August 2024 – Present',
+    location: 'Pune, Maharashtra',
+    points: [
+      'Developed and maintained full-stack MERN applications, contributing to a reported 20% improvement in business workflow efficiency.',
+      'Designed backend services using Node.js and Express.js for platform functionality.',
+      'Optimized database queries and API performance, contributing to a reported 25% reduction in response time.',
+      'Implemented authentication, role-based access control, and data validation.',
+      'Collaborated with frontend, QA, and product teams; deployed and maintained applications using AWS.',
+    ],
+  },
+  {
+    title: 'Backend Developer Intern',
+    company: 'BhojSoft Solutions',
+    dates: 'March 2024 – August 2024',
+    location: 'Pune, Maharashtra',
+    points: [
+      'Developed REST APIs using Node.js and Express.js.',
+      'Designed and managed MySQL and PostgreSQL database schemas.',
+      'Designed and maintained 20+ REST APIs.',
+    ],
+  },
+];
 
-const Experience = () => {
-    const Skills = [
-        {
-            id: 1,
-            name: 'HTML',
-            src: html,
-            style: "shadow-[#f16529]"
-        },
-        {
-            id: 2,
-            name: 'CSS',
-            src: css,
-            style: "shadow-[#039be5]"
-        },
-        {
-            id: 3,
-            name: 'JavaScript',
-            src: javascript,
-            style: "shadow-[#ffd600]"
-        },
-        {
-            id: 4,
-            name: "React.js",
-            src: reactImage,
-            style: "shadow-[#00d8ff]"
-        },
-        {
-            id: 5,
-            name: 'GraphQL',
-            src: graphql,
-            style: "shadow-[#e535ab]"
-        },
-        {
-            id: 6,
-            name: 'Git',
-            src: gitLogo,
-            style: "shadow-[#f34f29]"
-        },
-        {
-            id: 7,
-            name: 'GitHub',
-            src: github,
-            style: "shadow-[#181717]"
-        },
-        {
-            id: 8,
-            name: 'Tailwind CSS',
-            src: tailwind,
-            style: "shadow-[#44a8b3]"
-        },
-    ]
-
-  return (
-    <div name="experience" className=' bg-gradient-to-b from-gray-800 to-black w-full text-white  md:h-full'>
-
-            <div className=' max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-                <div className=' pb-8'>
-                    <p className=' text-4xl font-bold inline border-b-4 border-gray-500'>Experience</p>
-                    <p className='py-6'>These are the technologies I've worked with:</p>
-                </div>
-
-                <div className=' grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-4 sm:px-0'>
-
-                    {Skills.map((Skill) =>
-                    (<div key={Skill.id} className={`flex flex-col justify-center items-center shadow-md ${Skill.style} rounded-lg`}>
-                        <img src={Skill.src} alt={Skill.name} className=' w-full rounded-md duration-200 hover:scale-105' />
-                        <div className=' flex items-center justify-center'>
-                            <p className=' cursor-pointer w-1/2 py-3 m-4 duration-200 hover:scale-105'>{Skill.name}</p>
-                        </div>
-                    </div>)
-                    )}
-
-                </div>
+const Experience = () => (
+  <section className="section" id="experience" aria-labelledby="experience-title">
+    <div className="section-inner">
+      <p className="eyebrow">Work history</p>
+      <h2 className="section-title" id="experience-title">Experience</h2>
+      <div className="timeline">
+        {roles.map((role) => (
+          <article className="experience-card" key={role.title}>
+            <div className="experience-heading">
+              <div>
+                <h3>{role.title}</h3>
+                <p className="experience-company">{role.company} <span>·</span> {role.location}</p>
+              </div>
+              <p className="experience-dates">{role.dates}</p>
             </div>
+            <ul className="detail-list">
+              {role.points.map((point) => <li key={point}>{point}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
-        </div>
-  )
-}
-
-export default Experience
+export default Experience;

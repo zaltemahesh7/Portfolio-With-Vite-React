@@ -1,8 +1,23 @@
-# React + Vite
+# Mahesh Zalte — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive portfolio built with React and Vite. It presents Mahesh Zalte's backend-focused software development experience, skills, projects, education, and contact information.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+npm ci
+npm run dev
+```
+
+## Build and lint
+
+```sh
+npm run build
+npm run lint
+```
+
+The production build is written to `dist/`. For static hosting such as Netlify, use `npm run build` as the build command and `dist` as the publish directory.
+
+## Content and contact
+
+Resume source content is in `main.tex`; the portfolio links to `public/Mahesh_Zalte.pdf`. The contact form uses the existing Getform endpoint configured in `src/components/Contact.jsx`.

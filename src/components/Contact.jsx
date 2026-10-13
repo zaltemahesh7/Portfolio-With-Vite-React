@@ -1,25 +1,53 @@
-import React from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-const Contact = () => {
-  return (
-    <div name='contact' className='w-full min-h-screen bg-gradient-to-b from-black to-gray-800 p-8 text-white'>
-      <div className='flex flex-col justify-center max-w-screen-lg mx-auto h-full'>
-        <div className='text-center pb-12'>
-          <p className='text-5xl font-extrabold inline border-b-4 border-cyan-500'>Contact</p>
-          <p className='py-8 text-lg'>I'd love to hear from you! Whether you have a question or just want to say hi, feel free to drop a message.</p>
-        </div>
-
-        <div className='flex items-center justify-center'>
-          <form action="https://getform.io/f/5b896697-e59d-4463-949c-9e19ff5680f1" method='post' className='flex flex-col items-center justify-center w-full md:w-1/2'>
-            <input type="text" name="name" id="name" placeholder='Enter Your Name' className='w-full p-3 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none' />
-            <input type="email" name="email" id="email" placeholder='Enter Your Email' className='w-full p-3 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none' />
-            <textarea name="desc" rows="5" placeholder='Message' className='w-full p-3 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none'></textarea>
-            <button className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 mt-4 rounded-md hover:scale-105 transform transition duration-300'>Submit</button>
-          </form>
+const Contact = () => (
+  <section className="section section-muted" id="contact" aria-labelledby="contact-title">
+    <div className="section-inner contact-layout">
+      <div className="contact-copy">
+        <p className="eyebrow">Get in touch</p>
+        <h2 className="section-title" id="contact-title">Let’s talk about what you’re building.</h2>
+        <p className="section-lead">For opportunities and professional enquiries, reach me here:</p>
+        <a className="contact-email" href="mailto:maheshzalte.dev@gmail.com">
+          maheshzalte.dev@gmail.com
+        </a>
+        <p className="contact-location">Pune, Maharashtra, India</p>
+        <div className="contact-socials">
+          <a href="https://github.com/zaltemahesh7" target="_blank" rel="noreferrer">
+            <FaGithub aria-hidden="true" /> GitHub
+          </a>
+          <a href="https://linkedin.com/in/maheshzalte2000" target="_blank" rel="noreferrer">
+            <FaLinkedin aria-hidden="true" /> LinkedIn
+          </a>
         </div>
       </div>
+      <form
+        action="https://getform.io/f/5b896697-e59d-4463-949c-9e19ff5680f1"
+        className="contact-form"
+        method="post"
+      >
+        <div className="form-field">
+          <label htmlFor="name">Name</label>
+          <input autoComplete="name" id="name" maxLength="100" name="name" required />
+        </div>
+        <div className="form-field">
+          <label htmlFor="email">Email</label>
+          <input
+            autoComplete="email"
+            id="email"
+            maxLength="254"
+            name="email"
+            required
+            type="email"
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="message">Message</label>
+          <textarea id="message" maxLength="5000" minLength="10" name="message" required rows="5" />
+        </div>
+        <button className="button button-primary" type="submit">Send message</button>
+      </form>
     </div>
-  )
-}
+  </section>
+);
 
 export default Contact;
